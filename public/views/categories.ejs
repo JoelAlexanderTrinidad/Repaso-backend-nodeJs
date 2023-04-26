@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>categorias</h1>
+    <h4><%= name %></h4>
+
+    <% products.forEach(({name,id,img, price, features})=> { %>
+        <article style="border: 1px solid red; width: 30%;">
+            <a href="/products/detail/<%= id %>"><img height="220px" src="/images/<%= img[0] %>" alt=""></a>
+            <h4> <%= name %> </h4>
+            <a href="/products/detail/<%= id %>">VER MAS</a>
+        </article>
+        <br>
+    <% }) %>
+</body>
+</html>

@@ -8,19 +8,24 @@
     <title>Document</title>
 </head>
 <body>
+    <header class="header">
+        <a href="/products/category/1">celulares</a>
+        <a href="/products/category/2">tablets</a>
+        <a href="/products/category/3">computadoras</a>
+    </header>
     <section >
         <h1 style="background-color: aqua;">Celulares</h1>
 
         <% celulares.forEach(({name,id,img})=> { %>
             <article style="border: 1px solid red; width: 30%;">
-                <a href="/products/detail/<%= id %>"><img height="220px" src="/images/<%= img[0] %>" alt=""></a>
+                <a href="/products/detail/<%= id %>"><img height="220px" src="/images/<%= img %>" alt=""></a>
                 <h4>
                     <%= name %>
                 </h4>
                     <a href="/products/detail/<%= id %>">VER MAS</a>
             </article>
             <br>
-            <% }) %>
+        <% }) %>
     </section>
 
     <section>
@@ -28,7 +33,7 @@
 
         <% tablets.forEach(({name,id,img})=> { %>
             <article style="border: 1px solid red; width: 30%;" >
-                <a href="/products/detail/<%= id %>"><img height="220px" src="/images/<%= img[0] %>" alt=""></a>
+                <a href="/products/detail/<%= id %>"><img height="220px" src="/images/<%= img %>" alt=""></a>
                 <h4>
                     <%= name %>
                 </h4>
@@ -44,7 +49,7 @@
 
         <% computadoras.forEach(({name,id,img})=> { %>
             <article style="border: 1px solid red; width: 30%;">
-                <a href="/products/detail/<%= id %>"><img height="220px" src="/images/<%= img[0] %>" alt=""></a>
+                <a href="/products/detail/<%= id %>"><img height="220px" src="/images/<%= img %>" alt=""></a>
                 <h4>
                     <%= name %>
                 </h4>
