@@ -23,10 +23,19 @@ module.exports = {
         const { id } = req.params;
         const product = allProducts.find((product) => product.id === +id);
 
-        console.log(">>>>" ,product)
-
         return res.render('productDetail',{
             product
+        })
+    },
+    search: (req, res) => {
+
+        const {keyword} = req.query
+
+        const result = allProducts.filter(product => product.name.toLowerCase().startsWith(keyword.toLowerCase()))
+
+        return res.render('results',{
+            products: result,
+            keyword
         })
     }
 }

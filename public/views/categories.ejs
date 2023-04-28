@@ -7,6 +7,17 @@
     <title>Document</title>
 </head>
 <body>
+    <header >
+        <nav class="nav">
+            <a href="/products/category/1">celulares</a>
+            <a href="/products/category/2">tablets</a>
+            <a href="/products/category/3">computadoras</a>
+        </nav>
+        <form action="/products/search" method="GET" class="buscador">
+            <input type="text" name="keyword" placeholder="Buscar producto">
+            <button type="submit">Buscar</button>
+        </form>
+    </header>
     <h1>categorias</h1>
     <h4><%= name %></h4>
 

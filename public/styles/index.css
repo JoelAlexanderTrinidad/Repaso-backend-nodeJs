@@ -1,12 +1,17 @@
 h1{
     background-color: rebeccapurple;
 }
-.header{
+.nav{
     display: flex;
     justify-content: end;
     gap: 2rem;
 }
-.header a{
+.nav a{
     font-size: 2rem;
     text-decoration: none;
+}
+
+.buscador{
+    display: flex;
+    justify-content: center;
 }

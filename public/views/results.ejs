@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/index.css">
-    <title>Document</title>
+    <title>Products</title>
 </head>
 <body>
     <header >
@@ -19,14 +19,23 @@
             <button type="submit">Buscar</button>
         </form>
     </header>
-    <article>
+
+    <main>
+        <h2>Resultado de la busqueda: "<%= keyword %>"</h2>
+
+         <% if (products.length > 0) { %>
+            <% products.forEach(({id, img, name}) => { %>
+                <article style="border: 1px solid red; width: 30%;">
+                    <a href="/products/detail/<%= id %>"><img height="220px" src="/images/<%= img %>" alt=""></a>
+                    <h4><%= name %></h4>
+                        <a href="/products/detail/<%= id %>">VER MAS</a>
+                </article>
+            <% }) %>
         
-        <div>
-            <img style="width: 33.3%;" src="/images/<%= product.img %>" alt="...">
-            <h4> <%= product.name %> </h4>
-            <p><%= product.price %></p>
-            <p><%= product.features%></p>
-        </div>
-    </article>
+        <% } else { %>
+            <h2> No se encontraron resultados para "<%= keyword %>" :C</h2>
+        <% } %>
+    </main>
+ 
 </body>
 </html>
