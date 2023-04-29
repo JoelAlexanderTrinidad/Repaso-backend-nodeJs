@@ -5,6 +5,7 @@ const puerto = 8080;
 const indexRouter = require('./routes/indexRoutes');
 const productsRouter = require('./routes/productRoutes');
 const logger = require('morgan')
+const methodOverride = require('method-override')
 
 app.set('views', path.join(__dirname, '../public/views'));
 app.set('view engine', 'ejs');
