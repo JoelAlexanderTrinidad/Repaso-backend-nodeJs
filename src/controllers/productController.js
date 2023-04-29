@@ -1,7 +1,38 @@
 const categories = require('../data/categories.json')
 const allProducts = require('../data/products.json')
+const fs = require('fs')
+const path = require('path')
 
 module.exports = {
+    add: (req, res) => {
+        return res.render('productAdd',{
+            categories
+        })
+    },
+    save: (req, res) => {
+
+        const {nombre, precio, categoria} = req.body
+
+      
+        const lastID = allProducts[allProducts.length - 1].id
+
+        console.log("precio: ", typeof +precio)
+        
+        const newProduct = {
+            id: lastID + 1,
+            name: nombre,
+            price: +precio,
+            category: +categoria,
+            img: 'no-img.png'
+        }
+
+        allProducts.push(newProduct)
+        console.log(allProducts)
+        
+        fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(allProducts,null,3), 'utf-8')
+
+        return res.redirect('/')
+    },
     getByCategory: (req, res) => {
 
         const {idCategory}  = req.params
