@@ -33,6 +33,50 @@ module.exports = {
 
         return res.redirect('/')
     },
+    edit: (req, res) => {
+
+        const { id } = req.params;
+        const product = allProducts.find((product) => product.id === +id);
+
+        return res.render('productEdit',{
+            categories,
+            product
+        })
+    },
+    update: (req, res) => {
+
+        const {id} = req.params
+        const {nombre, precio, categoria} = req.body
+
+        // return res.send(req.body)
+
+        const productModify = allProducts.map(product => {
+            if(product.id === +id){
+                const productModified = {
+                    ...product,
+                    name : nombre,
+                    price: +precio,
+                    category: +categoria
+                }
+                return productModified
+            }
+            return product
+        })
+
+        fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(productModify,null,3), 'utf-8')
+
+        return res.redirect('/')
+
+    },
+    remove: (req, res) => {
+
+        const {id} = req.params
+        const productRemove = allProducts.filter(product => product.id !== +id)
+
+        fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(productRemove,null,3), 'utf-8')
+
+        return res.redirect('/')
+    },
     getByCategory: (req, res) => {
 
         const {idCategory}  = req.params

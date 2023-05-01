@@ -22,25 +22,23 @@
     </header>
 
     <main>
-        <h2>Editar producto</h2>
+        <h2>Editar producto: <%= product.name %></h2>
 
-        <form method="POST" class="form__addProduct">
+        <form method="POST" action="/products/update/<%= product.id %>?_method=PUT">
                 <label for="nombre">Nombre del producto</label>
-                <input type="text" id="nombre" name="nombre"  value="">
+                <input type="text" id="nombre" name="nombre"  value="<%= product.name %>">
         
                 <label for="precio">Precio</label>
-                <input type="number" id="precio" name="precio"  value="">
+                <input type="number" id="precio" name="precio"  value="<%= product.price %>">
 
                 <label for="categoria">Categorias</label>
                 <select name="categoria" id="categoria">
-                    <option value="" hidden selected>Seleccioná la categoría</option>
                     <% categories.forEach(categoria => { %>
-                        <option value="<%= categoria.id %>"><%= categoria.name %></option>
+                        <option value="<%= categoria.id %>" <%= categoria.id === product.category ? 'selected' : null %> ><%= categoria.name %></option>
                     <% }) %>
                 </select>
     
-                <button type="submit">Agregar</button>
-                <button type="reset">Limpiar</button>
+                <button type="submit">Editar</button>
         </form>
     </main>
  
