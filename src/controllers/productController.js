@@ -1,3 +1,4 @@
+const { emitWarning } = require('process')
 const categories = require('../data/categories.json')
 const allProducts = require('../data/products.json')
 const fs = require('fs')
@@ -12,8 +13,6 @@ module.exports = {
     save: (req, res) => {
 
         const {nombre, precio, categoria} = req.body
-
-      
         const lastID = allProducts[allProducts.length - 1].id
 
         console.log("precio: ", typeof +precio)
@@ -23,7 +22,7 @@ module.exports = {
             name: nombre,
             price: +precio,
             category: +categoria,
-            img: 'no-img.png'
+            img: req.file ? req.file.filename : 'no-img.png'
         }
 
         allProducts.push(newProduct)
@@ -48,7 +47,6 @@ module.exports = {
         const {id} = req.params
         const {nombre, precio, categoria} = req.body
 
-        // return res.send(req.body)
 
         const productModify = allProducts.map(product => {
             if(product.id === +id){
@@ -56,9 +54,16 @@ module.exports = {
                     ...product,
                     name : nombre,
                     price: +precio,
-                    category: +categoria
+                    category: +categoria,
+                    img: req.file ? req.file.filename : product.img
                 }
-                return productModified
+            if(req.file){
+                if( fs.existsSync(path.join(__dirname, '../../public/images/' + product.img)) && product.img !== 'no-img.png'){
+                    fs.unlinkSync(path.join(__dirname, '../../public/images/' + product.img))
+                }
+            }
+    
+            return productModified
             }
             return product
         })

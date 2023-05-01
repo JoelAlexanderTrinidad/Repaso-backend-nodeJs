@@ -24,7 +24,7 @@
     <main>
         <h2>Agregar producto</h2>
 
-        <form method="POST" class="form__addProduct">
+        <form method="POST" class="form__addProduct" enctype="multipart/form-data">
                 <label for="nombre">Nombre del producto</label>
                 <input type="text" id="nombre" name="nombre"  value="">
         
@@ -38,6 +38,9 @@
                         <option value="<%= categoria.id %>"><%= categoria.name %></option>
                     <% }) %>
                 </select>
+
+                <label for="image">Imagen</label>
+                <input type="file" id="image" name="image" accept="image/*">
     
                 <button type="submit">Agregar</button>
                 <button type="reset">Limpiar</button>

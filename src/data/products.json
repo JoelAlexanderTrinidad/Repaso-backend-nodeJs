@@ -133,10 +133,16 @@
       "img": "image-1655949549628.png"
    },
    {
-      "id": 22,
-      "name": "prueba",
-      "price": 1111,
-      "category": 2,
+      "id": 23,
+      "price": null,
+      "category": null,
       "img": "no-img.png"
+   },
+   {
+      "id": 24,
+      "name": "PRUEBA",
+      "price": 1,
+      "category": 3,
+      "img": "image-1682975175571.png"
    }
 ]
