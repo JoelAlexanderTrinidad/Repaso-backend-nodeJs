@@ -22,10 +22,14 @@
     <article>
         
         <div>
-            <img style="width: 33.3%;" src="/images/<%= product.img %>" alt="...">
+            <img style="width: 33.3%;" src="/images/<%= product.img[0] %>" alt="..." id="imgPrincipal">
             <h4> <%= product.name %> </h4>
             <p><%= product.price %></p>
             <p><%= product.features%></p>
+
+            <% product.img.forEach(img => { %>
+             <img width="100px" src="/images/<%= img %>" alt="" onclick="document.getElementById('imgPrincipal').src = this.src">
+            <% }) %>
             <a href="/products/edit/<%= product.id %>">Editar producto</a>
             <form action="/products/remove/<%= product.id %>?_method=DELETE" method="POST">
                 <button type="submit">Eliminar</button>

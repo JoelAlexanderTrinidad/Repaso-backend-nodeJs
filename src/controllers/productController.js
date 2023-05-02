@@ -14,6 +14,8 @@ module.exports = {
 
         const {nombre, precio, categoria} = req.body
         const lastID = allProducts[allProducts.length - 1].id
+        const images = req.files.map(image => image.filename)
+
 
         console.log("precio: ", typeof +precio)
         
@@ -22,7 +24,7 @@ module.exports = {
             name: nombre,
             price: +precio,
             category: +categoria,
-            img: req.file ? req.file.filename : 'no-img.png'
+            img: images.length > 0 ? images : ['no-img.png']
         }
 
         allProducts.push(newProduct)
@@ -43,6 +45,7 @@ module.exports = {
         })
     },
     update: (req, res) => {
+
 
         const {id} = req.params
         const {nombre, precio, categoria} = req.body

@@ -20,7 +20,7 @@ const upload = multer({
 
 router
     .get('/add', productController.add)
-    .post('/add', upload.single('image'),productController.save)
+    .post('/add', upload.array('image'),productController.save)
     .get('/edit/:id', productController.edit)
     .put('/update/:id', upload.single('image'),productController.update)
     .get('/category/:idCategory', productController.getByCategory)

@@ -4,145 +4,180 @@
       "name": "Samsung S22",
       "price": 1000,
       "category": 1,
-      "img": "image-1655949819123.png"
+      "img": [
+         "image-1655949819123.png"
+      ]
    },
    {
       "id": 2,
       "name": "Iphone 11",
       "price": 2000,
       "category": 1,
-      "img": "IPHONE-11-VERDE.png"
+      "img": [
+         "IPHONE-11-VERDE.png"
+      ]
    },
    {
       "id": 3,
       "name": "Motorola E7",
       "price": 1800,
       "category": 1,
-      "img": "16090.jpg"
+      "img": [
+         "16090.jpg"
+      ]
    },
    {
       "id": 4,
       "name": "Nokia 1100",
       "price": 100,
       "category": 1,
-      "img": "nokia-1100-1149-g.jpg"
+      "img": [
+         "nokia-1100-1149-g.jpg"
+      ]
    },
    {
       "id": 5,
       "name": "Alcatel Z2",
       "price": 200,
       "category": 1,
-      "img": "zte-maven-39429-g.jpg"
+      "img": [
+         "zte-maven-39429-g.jpg"
+      ]
    },
    {
       "id": 6,
       "name": "Ipad 10",
       "price": 1000,
       "category": 2,
-      "img": "2458-1.jpg"
+      "img": [
+         "2458-1.jpg"
+      ]
    },
    {
       "id": 7,
       "name": "Galaxy Tab A7",
       "price": 3000,
       "category": 2,
-      "img": "samsung-galaxy-tab.jpg"
+      "img": [
+         "samsung-galaxy-tab.jpg"
+      ]
    },
    {
       "id": 8,
       "name": "Xiaomi Mi5",
       "price": 500,
       "category": 1,
-      "img": "Xiaomi-Mi5.jpg"
+      "img": [
+         "Xiaomi-Mi5.jpg"
+      ]
    },
    {
       "id": 9,
       "name": "Asus i7",
       "price": 20000,
       "category": 3,
-      "img": "asus.png"
+      "img": [
+         "asus.png"
+      ]
    },
    {
       "id": 10,
       "name": "Acer i3",
       "price": 10000,
       "category": 3,
-      "img": "notebook-acer.jpg"
+      "img": [
+         "notebook-acer.jpg"
+      ]
    },
    {
       "id": 11,
       "name": "HP ProBook 4520s",
       "price": 15000,
       "category": 3,
-      "img": "hp.jpg"
+      "img": [
+         "hp.jpg"
+      ]
    },
    {
       "id": 12,
       "name": "MacBook Air 13",
       "price": 30000,
       "category": 3,
-      "img": "macbook-air.jpg"
+      "img": [
+         "macbook-air.jpg"
+      ]
    },
    {
       "id": 13,
       "name": "Asus i7 12Gb SDD 1TB",
       "price": 1000,
       "category": 3,
-      "img": "asus_i7.jpg"
+      "img": [
+         "asus_i7.jpg"
+      ]
    },
    {
       "id": 14,
       "name": "Motorola G4",
       "price": 200,
       "category": 1,
-      "img": "image-1652277008623.png"
+      "img": [
+         "image-1652277008623.png"
+      ]
    },
    {
       "id": 16,
       "name": "Ipad 11",
       "price": 2500,
       "category": 2,
-      "img": "2458-1.jpg"
+      "img": [
+         "2458-1.jpg"
+      ]
    },
    {
       "id": 18,
       "name": "Motorola G200",
       "price": 1000,
       "category": 1,
-      "img": "image-1652274235215.png"
+      "img": [
+         "image-1652274235215.png"
+      ]
    },
    {
       "id": 19,
       "name": "Samsung A22 negro",
       "price": 3000,
       "category": 1,
-      "img": "image-1652276219281.png"
+      "img": [
+         "image-1652276219281.png"
+      ]
    },
    {
       "id": 20,
       "name": "Samsung M12",
       "price": 3000,
       "category": 1,
-      "img": "m-12.jpg"
+      "img": [
+         "m-12.jpg"
+      ]
    },
    {
       "id": 21,
       "name": "Iphone X",
       "price": 1000,
       "category": 1,
-      "img": "image-1655949549628.png"
+      "img": [
+         "image-1655949549628.png"
+      ]
    },
    {
-      "id": 23,
-      "price": null,
-      "category": null,
-      "img": "no-img.png"
-   },
-   {
-      "id": 24,
-      "name": "PRUEBA",
-      "price": 1,
-      "category": 3,
-      "img": "image-1682975175571.png"
+      "id": 22,
+      "name": "Prueba img array",
+      "price": 123123,
+      "category": 2,
+      "img": [
+         "image-1682981882599.jpg",
+         "image-1682981882602.png"
+      ]
    }
 ]

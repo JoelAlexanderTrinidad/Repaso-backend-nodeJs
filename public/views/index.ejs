@@ -25,7 +25,7 @@
 
         <% celulares.forEach(({name,id,img})=> { %>
             <article style="border: 1px solid red; width: 30%;">
-                <a href="/products/detail/<%= id %>"><img height="220px" src="/images/<%= img %>" alt=""></a>
+                <a href="/products/detail/<%= id %>"><img height="220px" src="/images/<%= img[0] %>" alt=""></a>
                 <h4>
                     <%= name %>
                 </h4>
@@ -40,7 +40,7 @@
 
         <% tablets.forEach(({name,id,img})=> { %>
             <article style="border: 1px solid red; width: 30%;" >
-                <a href="/products/detail/<%= id %>"><img height="220px" src="/images/<%= img %>" alt=""></a>
+                <a href="/products/detail/<%= id %>"><img height="220px" src="/images/<%= img[0] %>" alt=""></a>
                 <h4>
                     <%= name %>
                 </h4>
@@ -56,7 +56,7 @@
 
         <% computadoras.forEach(({name,id,img})=> { %>
             <article style="border: 1px solid red; width: 30%;">
-                <a href="/products/detail/<%= id %>"><img height="220px" src="/images/<%= img %>" alt=""></a>
+                <a href="/products/detail/<%= id %>"><img height="220px" src="/images/<%= img[0] %>" alt=""></a>
                 <h4>
                     <%= name %>
                 </h4>
